@@ -44,6 +44,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
     defaultValues: initialData,
   });
 
+  // update the store
   const onSubmit = async (data: settingsFormValues) => {
     try {
       setLoading(true);
@@ -57,12 +58,28 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
     }
   };
 
+  // delete the store
+  const onDelete = async () => {
+    try {
+      setLoading(true);
+      await axios.delete(`/api/stores/${params.storeId}`);
+      router.refresh();
+      router.push("/");
+      toast.success("Store deleted");
+    } catch (error) {
+      toast.error("Make sure you removed all products and categories first.");
+    } finally {
+      setLoading(false);
+      setOpen(false);
+    }
+  };
+
   return (
     <>
       <AlertModal
         isOpen={open}
         onClose={() => setOpen(false)}
-        onConfirm={() => {}}
+        onConfirm={onDelete}
         loading={loading}
       />
       <div className="flex items-center justify-between">
