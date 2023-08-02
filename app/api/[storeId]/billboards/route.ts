@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(
   req: Request,
-  { params }: { params: { storedId: string } }
+  { params }: { params: { storeId: string } }
 ) {
   try {
     const { userId } = auth();
@@ -24,13 +24,13 @@ export async function POST(
       return new NextResponse("Image URL is required", { status: 400 });
     }
 
-    if (!params.storedId) {
+    if (!params.storeId) {
       return new NextResponse("Store id is required", { status: 400 });
     }
 
     const storeByUserId = await prismadb.store.findFirst({
       where: {
-        id: params.storedId,
+        id: params.storeId,
         userId,
       },
     });
@@ -43,7 +43,7 @@ export async function POST(
       data: {
         label,
         imageUrl,
-        storeId: params.storedId,
+        storeId: params.storeId,
       },
     });
 
