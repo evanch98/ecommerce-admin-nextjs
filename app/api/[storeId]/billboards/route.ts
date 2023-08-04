@@ -56,16 +56,16 @@ export async function POST(
 
 export async function GET(
   req: Request,
-  { params }: { params: { storedId: string } }
+  { params }: { params: { storeId: string } }
 ) {
   try {
-    if (!params.storedId) {
+    if (!params.storeId) {
       return new NextResponse("Store id is required", { status: 400 });
     }
 
     const billboards = await prismadb.billboard.findMany({
       where: {
-        storeId: params.storedId,
+        storeId: params.storeId,
       },
     });
 
