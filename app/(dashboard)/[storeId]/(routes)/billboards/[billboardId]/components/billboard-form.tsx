@@ -57,7 +57,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
     },
   });
 
-  // update the store
+  // update the billboard
   const onSubmit = async (data: billboardFormValues) => {
     try {
       setLoading(true);
@@ -79,7 +79,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
     }
   };
 
-  // delete the store
+  // delete the billboard
   const onDelete = async () => {
     try {
       setLoading(true);
