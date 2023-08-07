@@ -4,7 +4,7 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
-import { Billboard } from "@prisma/client";
+import { Product } from "@prisma/client";
 import { Trash } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -25,7 +25,7 @@ import { AlertModal } from "@/components/modals/alert-modal";
 import ImageUpload from "@/components/ui/image-upload";
 
 interface ProductFormProps {
-  initialData: Billboard | null;
+  initialData: Product | null;
 }
 
 const formSchema = z.object({
