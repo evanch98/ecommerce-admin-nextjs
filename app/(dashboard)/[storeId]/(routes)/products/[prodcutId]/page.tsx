@@ -1,5 +1,5 @@
 import prismadb from "@/lib/prismadb";
-import { ProductForm } from "./components/billboard-form";
+import { ProductForm } from "./components/product-form";
 
 const ProductPage = async ({ params }: { params: { productId: string } }) => {
   const product = await prismadb.product.findUnique({
