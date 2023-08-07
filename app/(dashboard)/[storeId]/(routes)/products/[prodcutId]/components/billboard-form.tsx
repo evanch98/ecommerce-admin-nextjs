@@ -24,7 +24,7 @@ import { useParams, useRouter } from "next/navigation";
 import { AlertModal } from "@/components/modals/alert-modal";
 import ImageUpload from "@/components/ui/image-upload";
 
-interface BillboardFormProps {
+interface ProductFormProps {
   initialData: Billboard | null;
 }
 
@@ -33,9 +33,9 @@ const formSchema = z.object({
   imageUrl: z.string().min(1),
 });
 
-type billboardFormValues = z.infer<typeof formSchema>;
+type productFormValues = z.infer<typeof formSchema>;
 
-export const BillboardForm: React.FC<BillboardFormProps> = ({
+export const ProductForm: React.FC<ProductFormProps> = ({
   initialData,
 }) => {
   const params = useParams();
@@ -49,7 +49,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
   const toastMessage = initialData ? "Billboard updated" : "Billboard created";
   const action = initialData ? "Save changes" : "Create";
 
-  const form = useForm<billboardFormValues>({
+  const form = useForm<productFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: initialData || {
       label: "",
@@ -58,7 +58,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
   });
 
   // update the billboard
-  const onSubmit = async (data: billboardFormValues) => {
+  const onSubmit = async (data: productFormValues) => {
     try {
       setLoading(true);
       if (initialData) {
