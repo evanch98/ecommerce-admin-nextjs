@@ -4,7 +4,7 @@ Start Date: 26<sup>th</sup> July, 2023.
 
 # Description
 
-The E-Commerce Admin Dashboard is a powerful web application designed to provide seamless management and control over an e-commerce website. Built using cutting-edge technologies like Next JS, TypeScript, Tailwind CSS, Shadcn UI, Planet Scale, Prisma, Zustand, Clerk Auth, and Cloudinary, this dashboard offers an intuitive and user-friendly interface for administrators to oversee and optimize various aspects of the online store.
+The E-Commerce Admin Dashboard with Stripe Integration is a robust web application designed to streamline and enhance the management of an e-commerce website. Developed using cutting-edge technologies like Next JS, TypeScript, Tailwind CSS, Shadcn UI, Planet Scale, Prisma, zustand, clerk auth, Cloudinary, and Stripe, this comprehensive dashboard provides administrators with a powerful toolkit to oversee and optimize various aspects of the online store.
 
 # Key Features
 
