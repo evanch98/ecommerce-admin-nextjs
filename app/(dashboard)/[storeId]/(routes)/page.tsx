@@ -8,7 +8,11 @@ interface DashboardPageProps {
   params: { storeId: string };
 }
 
-const DashboardPage: React.FC<DashboardPageProps> = ({ params }) => {
+const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
+  const totalRevenue = await getTotalRevenue(params.storeId);
+  const salesCount = () => {};
+  const stockCount = () => {}
+
   return (
     <div className="flex flex-col">
       <div className="flex-1 space-y-4 p-8 pt-6">
