@@ -1,3 +1,4 @@
+import { Card } from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
 
@@ -12,7 +13,7 @@ const DashboardPage: React.FC<DashboardPageProps> = ({ params }) => {
         <Heading title="Dashboard" description="Overview of your store" />
         <Separator />
         <div className="grid gap-4 grid-cols-3">
-          
+          <Card></Card>
         </div>
       </div>
     </div>
