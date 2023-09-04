@@ -44,7 +44,7 @@ FRONTEND_STORE_URL=
 STRIPE_WEBHOOK_SECRET=
 ```
 
-Follow the steps from the official documentation for [Clerk](https://clerk.com/docs/quickstarts/nextjs), [Planet Scale](https://planetscale.com/docs/tutorials/connect-nextjs-app), [Cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary) and [Stripe](https://stripe.com/docs/development) to get the values for the enviroment variables, `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`, `CLERK_SECRET_KET`, `DATABASE_URL`, `UPLOADTHING_SECRET`, and `UPLOADTHING_APP_ID`.
+Follow the steps from the official documentation for [Clerk](https://clerk.com/docs/quickstarts/nextjs), [Planet Scale](https://planetscale.com/docs/tutorials/connect-nextjs-app), [Cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary) and [Stripe](https://stripe.com/docs/development) to get the values for the environment variable.
 After completing the above steps, run `npm run dev` to test the project.
 
 ```bash
