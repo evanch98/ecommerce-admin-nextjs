@@ -17,3 +17,38 @@ The E-Commerce Admin Dashboard with Stripe Integration is a robust web applicati
 - The heart of any e-commerce website lies in its product management capabilities. The admin dashboard empowers administrators to add new products, update existing ones, archive out-of-stock products, mark products as featured products, and remove products that are no longer available. They can set product details such as name, category, price, images, and other product-specific attributes.
 - Efficient order management is crucial for any e-commerce website. The dashboard provides comprehensive tools to view, process, and manage incoming orders.
 - Seamlessly integrate Stripe as the payment gateway, allowing customers to make secure and convenient online payments. Admins can view transaction history and ensure a seamless checkout experience for shoppers.
+
+# Testing the Project
+
+To test the project, download the zip file and open it in the editor of your choice.
+Then, run `npm install` in the terminal to install the dependencies.
+
+```bash
+npm install
+```
+
+After installing the required dependencies, you will have to create a `.env` file at the root of your project folder.
+The required environment variables are as follows.
+
+```text
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+DATABASE_URL=
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+STRIPE_API_KEY=
+FRONTEND_STORE_URL=
+STRIPE_WEBHOOK_SECRET=
+```
+
+Follow the steps from the official documentation for [Clerk](https://clerk.com/docs/quickstarts/nextjs), [Planet Scale](https://planetscale.com/docs/tutorials/connect-nextjs-app), [Cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary) and [Stripe](https://stripe.com/docs/development) to get the values for the enviroment variables, `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`, `CLERK_SECRET_KET`, `DATABASE_URL`, `UPLOADTHING_SECRET`, and `UPLOADTHING_APP_ID`.
+After completing the above steps, run `npm run dev` to test the project.
+
+```bash
+npm run dev
+```
+
+If you do not want to go through all the troubles, you can always test the [demo website](https://ecommerce-admin-nextjs-mu.vercel.app/) for this project.
