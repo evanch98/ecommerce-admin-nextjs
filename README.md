@@ -1,5 +1,7 @@
 # ecommerce-admin-nextjs
 
+> The demo website no longer works due to the PlanetScale retiring the free plan.
+
 Start Date: 26<sup>th</sup> July, 2023.
 
 # Description
